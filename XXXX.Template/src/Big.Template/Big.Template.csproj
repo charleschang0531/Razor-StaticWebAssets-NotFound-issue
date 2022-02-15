@@ -1,0 +1,28 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>net6.0</TargetFramework>
+    <IncludeContentInPack>true</IncludeContentInPack>
+    <IsPackable>true</IsPackable>
+    <IncludeBuildOutput>false</IncludeBuildOutput>
+    <ContentTargetFolders>content</ContentTargetFolders>
+    <EnableDefaultItems>false</EnableDefaultItems>
+    <NoDefaultExcludes>true</NoDefaultExcludes>
+    <GeneratePackageOnBuild>True</GeneratePackageOnBuild>
+    <PackageOutputPath>.</PackageOutputPath>    
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Content Include="templates\**\*" Exclude="templates\**\bin\**\*;templates\**\obj\**\*" />
+    <Compile Remove="**\*" />
+  </ItemGroup>
+
+  <PropertyGroup>
+    <PackageType>Template</PackageType>
+    <Version>1.0.0</Version>
+    <PackageId>Big.ExtTemplate</PackageId>
+    <Title>Big.ExtTemplate</Title>    
+    <Authors>XXX</Authors>    
+    <Description>Templates to use when creating an application for XXX Inc.</Description>                    
+  </PropertyGroup>
+</Project>
